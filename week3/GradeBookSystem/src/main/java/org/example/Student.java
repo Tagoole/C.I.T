@@ -1,50 +1,64 @@
 package org.example;
+
 import java.util.HashMap;
 import java.util.Map;
 
+//enum display value --- do research
+enum Subject {
+    ENGLISH,
+    SocialStudies,
+    Science,
+    Mathematics
+}
+
 public class Student {
+    private String id;
     private String email;
     private String name;
-    private static int studentCount = 0;
+    private Map<Subject, Integer> grades = new HashMap<>();
 
-    Map<String,Student> studentsHashMap = new HashMap<String Student>();
-
-    Student(String email, String name){
+    // Main constructur
+    Student(String id, String email, String name, Map grades) {
+        this.id = id;
         this.email = email;
         this.name = name;
-        studentCount ++;
+        this.grades = (grades != null) ? grades : new HashMap<>();
     }
 
-    int getStudentCount(){return studentCount}
-
-    String generateStudentId(){
-        int nextId = getStudentCount() + 1;
-        return "s"+ nextId;
+    // Second Constructor
+    Student(String id, String name, String email) {
+        this(id, email, name, new HashMap<>());
     }
 
-    void getAllstudents(){
-
+    // setters
+    public void setName(String name) {
+        this.name = name;
     }
 
-    void checkWhetherIdExists(String id){}
-
-    void checkWhetherEmailExists(String email){
-
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    void registerStudent(String name, String email){
-        studentsHashMap.put(generateStudentId(), name);
-        System.out.println("Student:"+ name + "added..");
+    public void setGrades(Subject subject, int score) {
+        grades.put(subject, score);
     }
 
-    void updateStudentDetails(String id){
-        getAllstudents();
+    // setters
+    public String getId() {
+        return id;
     }
 
-    void deleteStudent(String id){
-        getAllstudents();
-
+    public String getEmail() {
+        return email;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public Map<Subject, Integer> getGrades() {
+        return grades;
+    }
 
 }
+// constructor 1
