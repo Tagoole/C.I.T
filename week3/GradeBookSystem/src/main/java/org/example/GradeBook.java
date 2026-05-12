@@ -1,6 +1,7 @@
 package org.example;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 
 public class GradeBook {
@@ -9,10 +10,12 @@ public class GradeBook {
 
 
     // incomplete method
-    public void registerStudent(Student studentObject){
+    public void registerStudent(String email, String name){
         studentCounter ++;
         String generatedId = "R1-"+studentCounter;
-        System.out.println("am not yet complete") ;
+        Student newStudent = new Student(generatedId,email,name);
+        studentDatabase.put(generatedId,newStudent);
+        System.out.println("Student "+name+" registered with ID: "+generatedId);
     }
 
     public void showAllStudents(){
@@ -20,10 +23,21 @@ public class GradeBook {
             System.out.println("Database is empty...");
             return;
         } else{
+            System.out.println("********************** Students in the Database **********************");
             for(Student student: studentDatabase.values()){
                 System.out.println("Name: "+ student.getName()+ "   Email: "+ student.getEmail()  );
             }
         }
+    }
+
+    public Map<String, String> getStudentNamesById(){
+        Map<String, String> idToStudent = new HashMap<>();
+
+        for (Student s: studentDatabase.values()){
+            idToStudent.put(s.getId(), s.getName());
+        }
+
+        return idToStudent;
     }
 
     public Student getStudent(String id){
