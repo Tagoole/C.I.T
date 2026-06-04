@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06884f9f-e5c4-4807-9524-15a9b9bf2c2b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../GradeBookSystem/src/main/java/org/example/Subject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GradeBookSystem/src/main/java/org/example/GradeBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GradeBookSystem/src/main/java/org/example/GradeBook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GradeBookSystem/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GradeBookSystem/src/main/java/org/example/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GradeBookSystem/src/main/java/org/example/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GradeBookSystem/src/main/java/org/example/Student.java" afterDir="false" />

@@ -3,13 +3,6 @@ package org.example;
 import java.util.HashMap;
 import java.util.Map;
 
-//enum display value --- do research
-enum Subject {
-    ENGLISH,
-    SocialStudies,
-    Science,
-    Mathematics
-}
 
 public class Student {
     private String id;
@@ -58,6 +51,14 @@ public class Student {
 
     public Map<Subject, Integer> getGrades() {
         return grades;
+    }
+
+    public static void main(String[] args){
+        Student newStudent = new Student("R1-2","tagooledavid@gmail.com","Tags Davit");
+
+
+        System.out.println(""+newStudent.getGrades());
+
     }
 
 }

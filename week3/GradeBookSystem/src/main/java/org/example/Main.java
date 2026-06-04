@@ -12,12 +12,12 @@ public class Main {
         System.out.println("\n" + "=".repeat(55));
         System.out.printf("%-10s %s %n", "", "THE COMMANDLINE GRADEBOOK SYSTEM");
         System.out.println("=".repeat(55));
+        System.out.println("  [0] Exit Application");
         System.out.println("  [1] Register Student");
         System.out.println("  [2] Get All Students");
         System.out.println("  [3] Get Unique Student Details");
         System.out.println("  [4] Delete Student");
         System.out.println("  [5] Empty the Database");
-        System.out.println("  [0] Exit Application");
         System.out.println("-".repeat(55));
         System.out.print("Select an Option: ");
     }
